@@ -1,0 +1,30 @@
+{% extends "layouts/layout.html" %}
+{% load static %}
+{% block title %} MADE IN CHACO | Contacto {% endblock %}
+{% block content %}
+
+<div class="contenedor">
+    <main>
+        <div class="cuerpo">
+            <div class="form">
+                <h3>CONTACTANOS</h3>
+                <hr>
+
+                {% if forms.errors %}
+                <p class="error">Por favor revise este campo</p>
+                {% endif %}
+                <form action="" method="POST" class="formulario">{% csrf_token %}
+                    
+                    {{form.as_p}}
+
+                    
+                    <input type="submit" value="ENVIAR">
+                </form>
+               
+            </div>
+        </div>
+    
+    </main>
+    </div>
+
+    {% endblock %}

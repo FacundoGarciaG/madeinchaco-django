@@ -1,0 +1,1 @@
+web: gunicorn madeInChaco.wsgi --log-file -

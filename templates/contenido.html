@@ -1,0 +1,34 @@
+{% extends "layouts/layout.html" %}
+{% load static %}
+{% block title %} MADE IN CHACO | Contenido {% endblock %}
+{% block content %}
+
+<div class="contenedor">
+    <main>
+        <div class="cuerpo">
+            <div class="contenido">
+                <h3>CONTENIDO</h3>
+              
+                <hr>
+
+                <div class="contenidoBD">
+                    {% for contenido in contenidos %}
+                    <figure class="contenidos">
+
+                        <img src="{{contenido.imagen.url}}" alt="{{contenido.titulo}}" loading="lazy" >
+                        <div class="cont-text">
+                            <h4>{{contenido.titulo}}</h4>
+                            <p class="subtitulo">{{contenido.subtitulo}}</p>
+                            <a href="/contenidounico/">Leer mas...</a>
+                        </div>
+
+                    </figure>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+{% endblock %}

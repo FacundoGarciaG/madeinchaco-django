@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% load static %}
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'madeInChacoApp/vendor/favicon/apple-touch-icon.png' %}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'madeInChacoApp/vendor/favicon/favicon-32x32.png' %}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'madeInChacoApp/vendor/favicon/favicon-16x16.png' %}">
+  <link rel="manifest" href="{% static 'madeInChacoApp/vendor/favicon/site.webmanifest' %}">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <script src="{% static 'madeInChacoApp/js/all.min.js' %}"></script>
+  <title>{% block title %} {% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'madeInChacoApp/vendor/bootstrap/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'madeInChacoApp/vendor/aos/css/aos.css' %}">
+  <link rel="stylesheet" href="{% static 'madeInChacoApp/css/normalize.css' %}">
+  <link rel='stylesheet' href='{% static 'madeInChacoApp/css/styles.css' %}' />
+</head>
+ 
+<body>
+  <header class="cabezal">
+    <div class="contenedor-cabezal">
+      <a href="/">
+        <h2 translate="no">MADE IN <br>CHACO</h2>
+      </a>
+      <nav class="navegador-cabezal">
+        <ul>
+          <li><a class="{% if 'proyecto' in request.path %} activo {% endif %}" href="{%url 'Proyecto'%}">PROYECTO</a></li>
+          <li><a class="{% if 'contenido' in request.path %} activo {% endif %}" href="{%url 'Contenido'%}">CONTENIDO</a></li>
+          <li><a class="{% if  'recorrer' in request.path %} activo {% endif %}" href="{%url 'Recorrer'%}">RECORRER</a></li>
+          <li><a class="{% if 'contacto' in request.path %} activo {% endif %}" href="{%url 'Contacto'%}">CONTACTO</a></li>
+          <li class="experiencia"><a href="{%url 'Experiencia'%}">EXPERIENCIA</a></li>
+        </ul>
+      </nav>
+      <nav class="menu-superior">
+        <ul class="redes paginas">
+          <li><a href=""><i class="icono fab fa-facebook-square"></i></a></li>
+          <li><a href="https://www.instagram.com/madeinchacoargentina/?hl=es-la" target="_blank"><i
+                class="icono fab fa-instagram"></i></a></li>
+          <li><a href=""><i class="icono fab fa-twitter-square"></i></a></li>
+        </ul>
+      </nav>
+    </div>
+
+  </header>
+
+  {% block content %} {% endblock %}
+
+  <footer>
+    <p>Sitio oficial <span translate="no">Made in Chaco</span> &copy; 2021</p>
+  </footer>
+  <script src="{% static 'madeInChacoApp/vendor/aos/js/aos.js' %}">
+  </script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="{% static 'madeInChacoApp/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+   <!-- <script type="application/javascript" src= "/tinymce/tinymce.min.js"></script>
+   <script type="application/javascript" src= "/javascripts/my-tinymce-config.js"></script> -->
+</body>
+
+</html>
