@@ -28,6 +28,6 @@ urlpatterns = [
     path('experiencia/',views.experiencia,name="Experiencia"),
     path('contenidounico/',views.contenidounico,name="Contenidounico"),
       
-]
+] 
 
-urlpatterns+=static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
+urlpatterns+=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
