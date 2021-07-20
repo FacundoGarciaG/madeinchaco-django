@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-p!fl=@dx8rd9&56pfgs9%9vh4frj5lvk)obgjelh%wklft8w)-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'madeInChaco.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
+""" DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'MadeInChaco',
@@ -87,16 +87,16 @@ DATABASES = {
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
-}
+} """
 
-""" import dj_database_url
+import dj_database_url
 from decouple import config 
 
 DATABASES = {
     'default': dj_database_url.config(
         default=config('DATABASE_URL')
     )
-} """
+}
 
 
 # Password validation
