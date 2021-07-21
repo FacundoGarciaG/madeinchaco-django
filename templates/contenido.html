@@ -12,6 +12,7 @@ CHACO | Contenido {% endblock %} {% block content %}
         <div class="contenidoBD">
           {% for contenido in contenidos %}
           <figure class="contenidos">
+            {% load static %}
             <img
               src="{{contenido.imagen.url}}"
               alt="{{contenido.titulo}}"
