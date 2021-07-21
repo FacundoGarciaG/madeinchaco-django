@@ -636,7 +636,7 @@ input:focus {
   margin-top: 5rem;
   text-align: justify;
   line-height: 2.5rem;
-  font-size: 5rem;
+  font-size: 2rem;
 }
 
 /*correcciones bootstrap*/
@@ -844,7 +844,7 @@ h2 {
   }
 
   .contenido-unico div .subtitulo {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .contenido-unico div p[class="textoCuerpo"] {
@@ -1066,7 +1066,7 @@ h2 {
   }
 
   .contenido-unico div .subtitulo {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   .contenido-unico div p[class="textoCuerpo"] {
@@ -1074,7 +1074,7 @@ h2 {
     text-align: justify;
     margin: auto;
     line-height: 2.5rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   /*media recorrer*/
@@ -1165,4 +1165,12 @@ h2 {
     margin: 1rem 0;
     width: calc((100% - 2rem) / 2);
   }
+}
+
+.contenido-unico div .subtitulo {
+  font-size: 3rem;
+}
+
+.contenido-unico div p[class="textoCuerpo"] {
+  font-size: 2rem;
 }
