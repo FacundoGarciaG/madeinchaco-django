@@ -630,12 +630,13 @@ input:focus {
   margin-top: 4rem;
 }
 
-.contenido-unico div p {
+.contenido-unico div .texto-cuerpo {
   width: 70%;
   margin: auto;
   margin-top: 5rem;
   text-align: justify;
   line-height: 2.5rem;
+  font-size: 5rem;
 }
 
 /*correcciones bootstrap*/
@@ -851,6 +852,7 @@ h2 {
     text-align: justify;
     margin: auto;
     line-height: 2rem;
+    font-size: 1.5rem;
   }
 
   /*media recorrer*/
