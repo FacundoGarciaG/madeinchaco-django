@@ -631,8 +631,11 @@ input:focus {
 }
 
 .contenido-unico div p {
-  margin-top: 2rem;
-  font-size: 2rem;
+  width: 70%;
+  margin: auto;
+  margin-top: 5rem;
+  text-align: justify;
+  line-height: 2.5rem;
 }
 
 /*correcciones bootstrap*/
@@ -844,7 +847,10 @@ h2 {
   }
 
   .contenido-unico div p {
-    font-size: 1.5rem;
+    width: 85%;
+    text-align: justify;
+    margin: auto;
+    line-height: 2rem;
   }
 
   /*media recorrer*/
@@ -1062,7 +1068,10 @@ h2 {
   }
 
   .contenido-unico div p {
-    font-size: 2rem;
+    width: 85%;
+    text-align: justify;
+    margin: auto;
+    line-height: 2.5rem;
   }
 
   /*media recorrer*/

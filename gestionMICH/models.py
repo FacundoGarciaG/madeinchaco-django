@@ -1,5 +1,6 @@
 from django import forms
 from django.db import models
+from django.db.models.aggregates import Max
 from django.db.models.base import Model
 from django.db.models.fields import CharField
 from django.forms import widgets
@@ -10,8 +11,8 @@ from cloudinary.models import CloudinaryField
 
 class Contenidos(models.Model):
     titulo = models.CharField(max_length=30)
-    subtitulo = models.CharField(max_length=50)
-    cuerpo = models.CharField(max_length=250)
+    subtitulo = models.CharField(max_length=150)
+    cuerpo = models.TextField()
     imagen = CloudinaryField('image',blank=True,null=True)
     tema = models.CharField(max_length=50)
     fecha = models.DateTimeField(auto_now_add=True)
