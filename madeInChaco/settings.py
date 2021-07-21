@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+import cloudinary 
+import cloudinary.uploader
+import cloudinary.api
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-p!fl=@dx8rd9&56pfgs9%9vh4frj5lvk)obgjelh%wklft8w)-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -40,7 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'gestionMICH',
-    'madeInChacoApp'
+    'madeInChacoApp',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -79,7 +83,7 @@ WSGI_APPLICATION = 'madeInChaco.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-""" DATABASES = {
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'MadeInChaco',
@@ -88,16 +92,16 @@ WSGI_APPLICATION = 'madeInChaco.wsgi.application'
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
-} """
+}
 
-import dj_database_url
+""" import dj_database_url
 from decouple import config 
 
 DATABASES = {
     'default': dj_database_url.config(
         default=config('DATABASE_URL')
     )
-}
+} """
 
 
 # Password validation
@@ -149,7 +153,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'live-static-files', 'static-root')
 
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'live-static-files', 'media-root')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 # Default primary key field type
@@ -158,5 +162,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'live-static-files', 'media-root')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+cloudinary.config( 
+  cloud_name = "hbds6eexk", 
+  api_key = "811912936876737", 
+  api_secret = "_CxDoBe8u0SJxMgFEJHSwaKtgqA" 
+)
 
 

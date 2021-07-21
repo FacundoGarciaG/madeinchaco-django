@@ -4,6 +4,7 @@ from django.db.models.base import Model
 from django.db.models.fields import CharField
 from django.forms import widgets
 from django.forms.widgets import Widget
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 
@@ -11,7 +12,7 @@ class Contenidos(models.Model):
     titulo = models.CharField(max_length=30)
     subtitulo = models.CharField(max_length=50)
     cuerpo = models.CharField(max_length=250)
-    imagen = models.ImageField(blank=True,null=True,upload_to="contenidosMedia")
+    imagen = CloudinaryField('image',blank=True,null=True)
     tema = models.CharField(max_length=50)
     fecha = models.DateTimeField(auto_now_add=True)
     class Meta:
