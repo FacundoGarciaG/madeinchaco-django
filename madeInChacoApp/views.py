@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.template import Template,Context
+from django.template import Template,Context, context
 from django.template import loader
 from django.template.loader import get_template
 from django.shortcuts import render
@@ -41,6 +41,8 @@ def contacto (request):
 def experiencia (request):
     return render(request,"experiencia.html")
 
-def contenidounico (request):
-    return render (request,"contenidounico.html")
+def contenidounico (request, id_contenido):
+    contenido=Contenidos.objects.get(id=id_contenido)
+    context = {'object':contenido} 
+    return render (request,"contenidounico.html", context)
 

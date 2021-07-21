@@ -5,20 +5,19 @@ CHACO | Contenido {% endblock %} {% block content %}
   <main>
     <div class="cuerpo">
       <div class="contenido">
-        <h3></h3>
+        <h3>{{object.titulo}}</h3>
         <hr />
 
         <div>
           <figure class="contenido-unico">
-            <h4>{{contenido.titulo}}</h4>
             <img
-              src="{{contenido.imagen.url}}"
-              alt="{{contenido.titulo}}"
+              src="{{object.imagen.url}}"
+              alt="{{object.titulo}}"
               loading="lazy"
             />
             <div>
-              <p class="subtitulo">{{contenido.subtitulo}}</p>
-              <p class="texto-cuerpo">{{contenido.cuerpo}}</p>
+              <p class="subtitulo">{{object.subtitulo}}</p>
+              <p class="texto-cuerpo">{{object.cuerpo}}</p>
             </div>
           </figure>
         </div>

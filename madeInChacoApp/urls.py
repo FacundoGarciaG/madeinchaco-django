@@ -26,7 +26,7 @@ urlpatterns = [
     path('recorrer/',views.recorrer,name="Recorrer"),
     path('contacto/',views.contacto,name="Contacto"),
     path('experiencia/',views.experiencia,name="Experiencia"),
-    path('contenidounico/',views.contenidounico,name="Contenidounico"),
+    path('contenidounico/<id_contenido>',views.contenidounico,name="Contenidounico"),
       
 ] 
 
