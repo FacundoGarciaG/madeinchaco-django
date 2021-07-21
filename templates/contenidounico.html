@@ -12,7 +12,7 @@ CHACO | Contenido {% endblock %} {% block content %}
           <figure class="contenido-unico">
             {% load static %}
             <img
-              src="{{object.imagen.url}}"
+              src="{{% static object.imagen.url %}}"
               alt="{{object.titulo}}"
               loading="lazy"
             />
