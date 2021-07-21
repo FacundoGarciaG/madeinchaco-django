@@ -630,7 +630,7 @@ input:focus {
   margin-top: 4rem;
 }
 
-.contenido-unico div .texto-cuerpo {
+.contenido-unico div p[class="textoCuerpo"] {
   width: 70%;
   margin: auto;
   margin-top: 5rem;
@@ -847,7 +847,7 @@ h2 {
     font-size: 2rem;
   }
 
-  .contenido-unico div p {
+  .contenido-unico div p[class="textoCuerpo"] {
     width: 85%;
     text-align: justify;
     margin: auto;
@@ -1069,11 +1069,12 @@ h2 {
     font-size: 4rem;
   }
 
-  .contenido-unico div p {
+  .contenido-unico div p[class="textoCuerpo"] {
     width: 85%;
     text-align: justify;
     margin: auto;
     line-height: 2.5rem;
+    font-size: 2rem;
   }
 
   /*media recorrer*/
